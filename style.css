@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+/* .josefin-sans-<uniquifier> {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* root Colors  */
+
+:root {
+  --dark_void: rgb(21, 20, 25);
+  --liquid_lava: rgb(245, 110, 15);
+  --dusty_grey: rgb(135, 135, 135);
+  --gluon_gray: rgb(27, 27, 30);
+  --slate_gray: rgb(38, 38, 38);
+  --snow: rgb(251, 251, 251);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+/* -----------------Hero ------------------------ */
+
+.hero {
+  height: 100vh;
+
+  background: var(--slate_gray);
+}
+
+.hero .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.hero .intro {
+  height: 80%;
+  width: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(10% + 2rem);
+}
+.intro h1 {
+  font-size: calc(10px + 5vw);
+  color: var(--snow);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 900;
+}
+.intro span {
+  color: var(--liquid_lava);
+  font-size: calc(10px + 2vw);
+}
+
+.hero hr {
+  width: 30%;
+  margin-top: 1rem;
+}
+/* - ------------Header-Start------------------ */
+
+header {
+  height: 4rem;
+  width: 100%;
+  background: var(--dusty_grey);
+  position: sticky;
+  top: 0;
+  color: var(--snow);
+  font-family: "Inter", sans-serif;
+}
+
+header .wrapper {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* .logo img {
+  height: 6rem;
+} */
+
+.navigation {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: fit-content;
+  font-size: 1.5rem;
+  animation: nav-entry cubic-bezier(0.9, -0.27, 0, 2.39);
+  animation-timeline: view();
+}
+@keyframes nav-entry {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.navigation li {
+  list-style: none;
+  transition: all 100ms ease-in-out;
+  font-weight: 300;
+}
+
+.navigation li:hover {
+  transform: scale(1.1);
+  color: var(--liquid_lava);
+}
+
+.navigation a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.scroll_down {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 3rem;
+  color: var(--snow);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.scroll_down i {
+  animation: bouncing 1.5s cubic-bezier(0.75, 0.06, 0.19, 0.86) infinite;
+}
+@keyframes bouncing {
+  0% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: 0px 10px;
+  }
+  100% {
+    translate: 0px 0px;
+  }
+}
+
+/* <!-- ------------Header-End----------------------> */
+
+/* <!-- ------------Main-Start-------------------> */
+main {
+  height: 100vh;
+  background: var(--dusty_grey);
+}
+/* <!-- ------------Main-End----------------------> */
+
+/* <!-- ------------footer-Start-------------------> */
+
+/* <!-- ------------footer-End----------------------> */
